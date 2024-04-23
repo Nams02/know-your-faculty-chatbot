@@ -19,7 +19,7 @@ This project implements a chatbot that allows users to inquire about faculty inf
 - **Backend:**
     - Flask: a Python web framework for building the server-side application.
     - Pandas: a Python library for data manipulation (used to read and process the faculty data).
-    - langchain: a Python library for interacting with Large Language Models (LLMs) like OpenAI.
+    - langchain-openai: a Python library for interacting with Large Language Models (LLMs) like OpenAI.
 
 ### Running the Project
 
@@ -27,7 +27,7 @@ This project implements a chatbot that allows users to inquire about faculty inf
    - Ensure you have Python (3.10 recommended) and Node.js (for JavaScript) installed on your system.
    - Install the required Python libraries:
      ```bash
-     pip install Flask pandas langchain openai
+     pip install Flask pandas langchain-openai
      ```
 2. **Clone the repository:**
    ```bash
@@ -36,15 +36,9 @@ This project implements a chatbot that allows users to inquire about faculty inf
 3. **Obtain and set your OpenAI API key:**
    - Create an account on OpenAI ([https://openai.com/](https://openai.com/)) and obtain an API key.
    - Set the `OPENAI_API_KEY` environment variable with your key:
-     - **Option 1:** In your terminal, run:
-       ```bash
-       export OPENAI_API_KEY='your_api_key'
-       ```
-     - **Option 2:** Create a `.env` file in your project root and add the line:
-       ```
-       OPENAI_API_KEY=your_api_key
-       ```
-       Make sure to configure your development environment to load environment variables from this file (consult your environment's documentation for details).
+     ```bash
+     export OPENAI_API_KEY='your_api_key'
+     ```
 4. **Data Preparation:**
    - Ensure the `fdata.csv` file exists in the project directory.
    - The CSV file should be formatted correctly with the following:
@@ -63,7 +57,8 @@ This project implements a chatbot that allows users to inquire about faculty inf
 **Please note:**
 
 - This is a basic example, and a production deployment might require additional configuration.
-- Consider replacing `'your_api_key'` with actual instructions on how to obtain and set the OpenAI API key securely (avoid committing it to version control).
+- Make sure to replace `'your_api_key'` with your actual OpenAI API key.
+- Ensure that you have the correct path to the `fdata.csv` file in your `main.py`.
 
 ### Deployment
 
