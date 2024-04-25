@@ -3,7 +3,7 @@ import pandas as pd
 from langchain.llms import OpenAI
 import os
 
-os.environ['OPENAI_API_KEY'] = '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'
+os.environ['OPENAI_API_KEY'] = 'your_api_key'
 model = OpenAI(temperature=0.6)
 
 
